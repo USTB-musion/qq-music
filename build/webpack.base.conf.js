@@ -21,12 +21,14 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': resolve('src')
+      '@': resolve('src'),
+      'common': resolve('src/common'),
+      'components': resolve('src/components')
     }
   },
   module: {
     rules: [
-      {
+      /*{
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
@@ -34,7 +36,7 @@ module.exports = {
         options: {
           formatter: require('eslint-friendly-formatter')
         }
-      },
+      },*/
       {
         test: /\.vue$/,
         loader: 'vue-loader',
