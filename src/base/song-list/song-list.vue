@@ -19,9 +19,7 @@
     props: {
       songs: {
         type: Array,
-        default: function(){
-          return []
-        }
+        default: []
       },
       rank: {
         type: Boolean,
