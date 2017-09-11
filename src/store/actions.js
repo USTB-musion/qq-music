@@ -1,4 +1,4 @@
-import * as types from './mutations.types'
+import * as types from './mutations-types'
 
 export const selectPlay = function({commit,state},{list,index}) {
 	commit(types.SET_SEQUNCE_LIST,list)
