@@ -1,9 +1,9 @@
 <template>
   <div class="search">
     <div class="search-box-wrapper">
-    	<search-box ref="searchBox"></search-box>
+    	<search-box ref="searchBox" @query="onQueryChange"></search-box>
     </div>
-    <div class="shortcut-wrapper">
+    <div class="shortcut-wrapper" v-show="!query">
     	<div class="shortcut">
     		<div class="hot-key">
     			<h1 class="title">热门搜索</h1>
@@ -15,7 +15,7 @@
     		</div>
     	</div>
     </div>
-    <div class="search-result">
+    <div class="search-result" v-show="query">
     	<suggest :query="query"></suggest>
     </div>
   </div>
@@ -40,6 +40,9 @@
  		methods: {
  			addQuery(query) {
  				this.$refs.searchBox.setQuery(query)
+ 			},
+ 			onQueryChange() {
+ 				this.query = query
  			},
  			_getHotkey() {
  				getHotKey().then((res) => {
