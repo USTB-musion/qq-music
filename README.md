@@ -1,6 +1,6 @@
 # qq-music
 
-> QQ音乐播放器
+> vue做的一个播放器app
 
 ## Build Setup
 
