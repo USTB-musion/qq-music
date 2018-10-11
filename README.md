@@ -2,11 +2,11 @@
 
 > vue做的一个播放器app
 
-## Build
+### Build
 
-# 安装依赖
+### 安装依赖
 npm install
 
-# localhost:8080
+### localhost:8080
 npm run dev
 
